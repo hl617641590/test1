@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: item-service
+    
+#server:#  port: 8001
+  
+eureka:  client:    service-url:
+      #结合云服务才能设置其他选项      defaultZone: http://eureka1:2001/eureka,http://eureka2:2002/eureka
+      
+---
+spring:
+  profiles: item1
+
+server:
+  port: 8001
+  
+---
+spring:  profiles: item2
+  
+server:  port: 8002
